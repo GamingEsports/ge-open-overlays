@@ -1,0 +1,63 @@
+{
+  "name": "ge-open-overlays",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "Derek",
+    "email": "derek.bond24@gmail.com",
+    "url": "jpg.contact"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^2.0.0",
+    "graphics": [
+      {
+        "file": "background.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      }
+    ],
+    "dashboardPanels": [
+      {
+        "name": "panel",
+        "title": "GE Open",
+        "width": 2,
+        "file": "panel.html",
+        "workspace": "GE Open",
+        "headerColor": "#525F78"
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": "https://github.com/GamingEsports/ge-open-overlays.git",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^3.1.2",
+    "p5": "^1.9.2"
+  },
+  "scripts": {
+    "start": "cd ../.. && nodecg start"
+  }
+}

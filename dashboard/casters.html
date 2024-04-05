@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="src/casters.js" defer></script>
+</head>
+
+<body>
+    <button class="big-button" id="show-casters" onclick="showCastersClicked()">Show casters: ON<br><i style="font-size: .8em; font-weight: 400;">Updates instantly</i></button>
+    <div class="section">
+        <label for="caster-a">Caster 1</label>
+        <input type="text" id="caster-a" autocomplete="off" onchange="casterNameChanged(1)">
+        <label for="caster-a-sub">Caster 1 Subtext</label>
+        <input type="text" id="caster-a-sub" autocomplete="off" onchange="casterSubtextChanged(1)">
+        <label for="caster-b">Caster 2</label>
+        <input type="text" id="caster-b" autocomplete="off" onchange="casterNameChanged(2)">
+        <label for="caster-b-sub">Caster 2 Subtext</label>
+        <input type="text" id="caster-b-sub" autocomplete="off" onchange="casterSubtextChanged(2)">
+    </div>
+    
+    <button class="green" onclick="updateButtonClicked()">Update</button>
+    <button class="red" onclick="revertButtonClicked()">Revert</button>
+    <div id="notsaved" class="alert">⚠ Changes are not live</div>
+</body>
+
+</html>

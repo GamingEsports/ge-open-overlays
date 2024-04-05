@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="src/break.js" defer></script>
+</head>
+
+<body>
+    <div class="section">
+        <label for="info-text">Break Scene Text</label>
+        <input type="text" id="info-text" autocomplete="off" onchange="infoTextChanged()">
+    </div>
+    <button class="green" onclick="updateButtonClicked()">Update</button>
+    <button class="red" onclick="revertButtonClicked()">Revert</button>
+    <div id="notsaved" class="alert">⚠ Changes are not live</div>
+</body>
+
+</html>

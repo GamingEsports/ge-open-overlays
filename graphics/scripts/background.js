@@ -25,8 +25,8 @@ export class GEOpenBackground extends LitElement {
             p5.setup = function () {
                 const c = p5.createCanvas(1920, 1080);
                 c.parent(element);
-                for (let i = 0; i < 150; i++) {
-                    this.particles.push(new Particle(p5.random(0, 1920), p5.random(0, 1080), p5.random(.05, .38), p5.random(5, 70)));
+                for (let i = 0; i < 220; i++) {
+                    this.particles.push(new Particle(p5.random(0, 1920), p5.random(0, 1080), p5.random(.02, .50), p5.random(5, 70)));
                 }
                 c.style("visibility", "visible")
             }

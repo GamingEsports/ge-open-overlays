@@ -24,16 +24,44 @@
       {
         "file": "background.html",
         "width": 1920,
-        "height": 1080,
-        "singleInstance": false
+        "height": 1080
+      },
+      {
+        "file": "bottom-bar.html",
+        "width": 1920,
+        "height": 1080
       }
     ],
     "dashboardPanels": [
       {
-        "name": "panel",
-        "title": "GE Open",
+        "name": "bottom-bar",
+        "title": "Bottom Bar",
+        "width": 3,
+        "file": "bottom-bar.html",
+        "workspace": "GE Open",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "break",
+        "title": "Break",
         "width": 2,
-        "file": "panel.html",
+        "file": "break.html",
+        "workspace": "GE Open",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "current-match",
+        "title": "Current Match",
+        "width": 3,
+        "file": "current-match.html",
+        "workspace": "GE Open",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "casters",
+        "title": "Casters",
+        "width": 3,
+        "file": "casters.html",
         "workspace": "GE Open",
         "headerColor": "#525F78"
       }

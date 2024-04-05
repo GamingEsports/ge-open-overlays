@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="src/bottom-bar.js" defer></script>
+</head>
+
+<body>
+    <div class="section">
+        <button class="big-button selected" id="show-current" onclick="showCurrentClicked()">Show current match</button>
+        <button class="big-button" id="show-break" onclick="showBreakClicked()">Show misc text</button>
+        <label for="break-text">Misc Text</label>
+        <input type="text" id="break-text" autocomplete="off" onchange="breakTextChanged()">
+    </div>
+    <button class="green" onclick="updateButtonClicked()">Update</button>
+    <button class="red" onclick="revertButtonClicked()">Revert</button>
+    <div id="notsaved" class="alert">⚠ Changes are not live</div>  
+</body>
+
+</html>

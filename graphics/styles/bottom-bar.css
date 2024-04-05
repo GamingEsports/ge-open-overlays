@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+}
+
+.bar-wrapper {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    width: 1820px;
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+}
+
+.box-wrapper {
+    height: 83px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+}
+
+.box-wrapper > .label {
+    height: 100%;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Mono";
+    color: #2B2628;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #F05B56;
+}
+
+.box-wrapper > .label.clipped {
+    /* clip-path: ; */
+}
+
+.box-wrapper.tall {
+    height: 113px;
+}
+
+.width-game {
+    width: 630px;
+}
+
+.width-score {
+    width: 816px;
+}

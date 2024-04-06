@@ -12,6 +12,36 @@
         <label for="info-text">Break Scene Text</label>
         <input type="text" id="info-text" autocomplete="off" onchange="infoTextChanged()">
     </div>
+    <div class="section">
+        <label for="past-team-a">Past Match Team A</label>
+        <input type="text" id="past-team-a" autocomplete="off" onchange="pastTeamAChanged()">
+        <label for="past-team-b">Past Match Team B</label>
+        <input type="text" id="past-team-b" autocomplete="off" onchange="pastTeamBChanged()">
+        <div class="score-wrapper">
+            <label for="game-select">Past Match Game</label>
+            <select id="game-select" onchange="pastGameChanged()">
+                <option>Valorant</option>
+                <option>Overwatch 2</option>
+                <option>Rainbow Six Siege</option>
+            </select>
+            <label for="past-team-a-score">Past Match Team A Score</label>
+            <label for="past-team-b-score">Past Match Team B Score</label>
+            <input type="number" id="past-team-a-score" min="0" autocomplete="off" onchange="pastTeamAScoreChanged()">
+            <input type="number" id="past-team-b-score" min="0" autocomplete="off" onchange="pastTeamBScoreChanged()">
+        </div>
+    </div>
+    <div class="section">
+        <label for="next-team-a">Next Match Team A</label>
+        <input type="text" id="next-team-a" autocomplete="off" onchange="nextTeamAChanged()">
+        <label for="next-team-b">Next Match Team B</label>
+        <input type="text" id="next-team-b" autocomplete="off" onchange="nextTeamBChanged()">
+        <label for="game-select">Next Match Game</label>
+            <select id="game-select" onchange="pastGameChanged()">
+                <option>Valorant</option>
+                <option>Overwatch 2</option>
+                <option>Rainbow Six Siege</option>
+            </select>
+    </div>
     <button class="green" onclick="updateButtonClicked()">Update</button>
     <button class="red" onclick="revertButtonClicked()">Revert</button>
     <div id="notsaved" class="alert">⚠ Changes are not live</div>

@@ -1,10 +1,11 @@
 const defaultRep = {
-    teamAName: '',
-    teamBName: '',
-    teamAScore: 0,
-    teamBScore: 0,
+    playerAname: '',
+    playerBname: '',
+    playerAScore: 0,
+    playerBScore: 0,
     matchStyle: '',
-    matchName: ''
+    matchName: '',
+    game: ''
 }
 const currentMatchRep = nodecg.Replicant('current-match', {defaultValue: defaultRep});
 const unsavedCurrentMatchRep = nodecg.Replicant('current-match-unsaved', {defaultValue: defaultRep});
@@ -15,6 +16,7 @@ const teamAScore = document.querySelector("#player-a-score");
 const teamBScore = document.querySelector("#player-b-score");
 const matchStyle = document.querySelector("#match-style");
 const matchName = document.querySelector("#match-name");
+const gameSelect = document.querySelector("#game-select");
 const notSaved = document.querySelector("#notsaved");
 
 NodeCG.waitForReplicants(currentMatchRep, unsavedCurrentMatchRep).then(() => {
@@ -27,7 +29,17 @@ NodeCG.waitForReplicants(currentMatchRep, unsavedCurrentMatchRep).then(() => {
     });
 
     currentMatchRep.on('change', (newVal, oldVal) => {
-        if (oldVal === undefined) return;
+        if (!oldVal) {
+            teamAName.value = newVal.playerAName;
+            teamBName.value = newVal.playerBName;
+            teamAScore.value = newVal.playerAScore;
+            teamBScore.value = newVal.playerBScore;
+            matchStyle.value = newVal.matchStyle;
+            matchName.value = newVal.matchName;
+            gameSelect.value = newVal.game;
+            return;
+        } 
+
         notSaved.style.display = "none";
     });
 });
@@ -62,6 +74,10 @@ function updateButtonClicked() {
 
 function revertButtonClicked() {
     unsavedCurrentMatchRep.value = JSON.parse(JSON.stringify(currentMatchRep.value));
+}
+
+function gameChanged() {
+    unsavedCurrentMatchRep.value.game = gameSelect.value;
 }
 
 function replicantsEqual(a, b){

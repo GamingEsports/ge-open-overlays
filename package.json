@@ -44,7 +44,7 @@
       {
         "name": "break",
         "title": "Break",
-        "width": 2,
+        "width": 3,
         "file": "break.html",
         "workspace": "GE Open",
         "headerColor": "#525F78"

@@ -1,6 +1,6 @@
-body {
+/* body {
     background-color: black;
-}
+} */
 
 .bar-wrapper {
     position: absolute;
@@ -19,10 +19,14 @@ body {
     width: auto;
 }
 
+.logo.full {
+    height: 83px;
+}
+
 .box-wrapper {
     height: 83px;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
 }
 
@@ -35,14 +39,41 @@ body {
     align-items: center;
     font-family: "IBM Plex Mono";
     color: #2B2628;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     background-color: #F05B56;
 }
 
 .box-wrapper > .label.clipped {
-    /* clip-path: ; */
+    clip-path: polygon(0 15px, 18px 0, 105% 0, 105% 100%, 18px 100%, 0 calc(100% - 15px));
+}
+
+.box-wrapper > .box {
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    border: 3px solid #F05B56;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, rgba(240, 91, 86, 0.10) 100%);
+    font-size: 38px;
+    font-weight: 600;
+    color: #FCFCD7;
+    text-transform: uppercase;
+}
+
+.box-wrapper:has(.label) > .box {
+    border-left-width: 0;
+    width: calc(100% - 3px)
+}
+
+.box-wrapper > .box.stacked {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .box-wrapper.tall {

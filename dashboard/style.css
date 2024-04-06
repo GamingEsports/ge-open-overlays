@@ -120,7 +120,7 @@ button.inactive:hover{
     color: inherit;
 }
 
-input[type="text"]{
+input[type="text"], input[type="number"], select{
     width: -webkit-fill-available;
     width: -moz-available;
     background: #FFFFFF20;
@@ -134,7 +134,7 @@ input[type="text"]{
     transition-duration: .1s;
 }
 
-input[type="text"]:focus, input[type="number"]:focus{
+input[type="text"]:focus, input[type="number"]:focus, select:focus{
     background: white;
     color: black;
 }
@@ -143,24 +143,9 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 1
 }
 
-input[type="checkbox"]{
+input[type="checkbox"], select{
     cursor: pointer;
 }
-
-input[type="number"]{
-    width: -webkit-fill-available;
-    width: -moz-available;
-    background: #FFFFFF20;
-    border: none;
-    outline: none;
-    color: inherit;
-    font-size: 1rem;
-    font-family: inherit;
-    padding: .35em;
-    border-radius: .5em;
-    transition-duration: .1s;
-}
-
 
 .score-wrapper {
     display: grid;

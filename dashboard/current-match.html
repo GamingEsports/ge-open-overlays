@@ -9,6 +9,15 @@
 
 <body>
     <div class="section">
+        <label for="game-select">Game</label>
+        <select id="game-select" onchange="gameChanged()">
+            <option>Valorant</option>
+            <option>Overwatch 2</option>
+            <option>Rainbow Six Siege</option>
+        </select>
+    </div>
+
+    <div class="section">
         <label for="player-a-name">Team A</label>
         <input type="text" id="player-a-name" autocomplete="off" onchange="playerANameChanged()">
         <label for="player-b-name">Team B</label>

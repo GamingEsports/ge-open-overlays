@@ -30,6 +30,26 @@
         "file": "bottom-bar.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "score-a-left.html",
+        "width": 450,
+        "height": 80
+      },
+      {
+        "file": "score-a-right.html",
+        "width": 450,
+        "height": 80
+      },
+      {
+        "file": "score-b-left.html",
+        "width": 450,
+        "height": 80
+      },
+      {
+        "file": "score-b-right.html",
+        "width": 450,
+        "height": 80
       }
     ],
     "dashboardPanels": [

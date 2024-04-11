@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Tomorrow";
+}
+
+.score {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.score.left {
+    flex-direction: row-reverse;
+}
+
+.score > .name-wrapper {
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 3px solid #F05B56;
+    color: #FCFCD7;
+    font-size: 36px;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.score.left > .name-wrapper {
+    justify-content: flex-start;
+    text-align: left;
+    border-left-width: 0;
+}
+
+.score.right > .name-wrapper {
+    border-right-width: 0;
+    text-align: right;
+}
+
+.score > .name-wrapper > .name {
+    margin: 0 30px;
+}
+
+.score > .name-wrapper > ge-open-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.score > .score-wrapper {
+    width: 76px;
+    height: 100%;
+    background-color: #F05B56;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #2B2628;
+    font-size: 46px;
+}

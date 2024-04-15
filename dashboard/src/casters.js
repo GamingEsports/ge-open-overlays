@@ -77,7 +77,7 @@ function revertButtonClicked() {
 }
 
 function showCastersClicked() {
-    showCastersRep.value = !showCastersRep.value;git 
+    showCastersRep.value = !showCastersRep.value;
 }
 
 function replicantsEqual(a, b){

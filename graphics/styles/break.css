@@ -69,8 +69,17 @@ body {
 }
 
 .break-text {
-    width: -webkit-fill-available;
+    width: 1009px;
     height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .next-match {
@@ -79,4 +88,28 @@ body {
 
 .frame {
     width: 1217.78px;
+}
+
+.next-match-content {
+    width: calc(100% - 60px);
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 52px;
+    gap: .2em;
+}
+
+.vs {
+    background: #F05B56;
+    color: #2B2628;
+    padding: .1em .15em;
+    line-height: 1em;
+}
+
+.next-match-content > .match-info {
+    margin-top: 1rem;
+    font-size: 30px;
+    font-weight: 400;
 }

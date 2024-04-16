@@ -29,6 +29,11 @@ const notSaved = document.querySelector("#notsaved");
 
 NodeCG.waitForReplicants(castersRep, unsavedCastersRep, showCastersRep).then(() => {
     unsavedCastersRep.on('change', (newVal) => {
+        casterA.value = newVal.casterA.name;
+        casterB.value = newVal.casterB.name;
+        casterAsub.value = newVal.casterA.subtext;
+        casterBsub.value = newVal.casterB.subtext;
+
         if (!replicantsEqual(newVal, castersRep.value)) {
             notSaved.style.display = "block";
         } else {
@@ -62,9 +67,9 @@ function casterNameChanged(num) {
 
 function casterSubtextChanged(num) {
     if (num === 1) {
-        unsavedCastersRep.value.casterA.subtext = casterA.value;
+        unsavedCastersRep.value.casterA.subtext = casterAsub.value;
     } else if (num === 2) {
-        unsavedCastersRep.value.casterB.subtext = casterB.value;
+        unsavedCastersRep.value.casterB.subtext = casterBsub.value;
     }
 }
 

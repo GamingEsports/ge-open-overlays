@@ -1,0 +1,38 @@
+.caster-wrapper {
+    width: calc(1920px - 300px);
+    margin: 0 150px;
+    height: 870px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: flex-end;
+}
+
+.caster-wrapper.single {
+    grid-template-columns: 1fr;
+
+}
+
+.caster-card {
+    background: #662B29;
+    border: 3px solid #F05B56;
+    padding: 0 30px;
+    color: #FCFCD7;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    font-size: 55px;
+    min-width: 360px;
+}
+
+.caster-card > .name {
+    font-weight: 500;
+}
+
+.caster-card > .subtext {
+    font-size: .5em;
+    font-weight: 400;
+    font-family: "IBM Plex Mono";
+}

@@ -78,9 +78,14 @@ export class GEOpenCasters extends LitElement {
         });
     }
 
+    updated() {
+        this.fitCasterCard('caster-a');
+        this.fitCasterCard('caster-b');
+    }
+
     render() {
-        const casterA = this.getCasterCard(this.casterAName, this.casterASubtext);
-        const casterB = this.getCasterCard(this.casterBName, this.casterBSubtext);
+        const casterA = this.getCasterCard(this.casterAName, this.casterASubtext, "caster-a");
+        const casterB = this.getCasterCard(this.casterBName, this.casterBSubtext, "caster-b");
         const onlyOneCaster = casterA === undefined || casterB === undefined;
         return html`
             <div class="caster-wrapper ${onlyOneCaster ? "single" : ""}">
@@ -90,18 +95,29 @@ export class GEOpenCasters extends LitElement {
         `;
     }
 
-    getCasterCard(name, subtext) {
+    getCasterCard(name, subtext, id) {
         if (name === undefined || name === '') {
             return undefined;
         }
         return html`
             <div class="card-transition">
                 <div class="caster-card">
-                    <div class="name">${name}</div>
-                    <div class="subtext">${subtext}</div>
+                    <div id="${id}">
+                        <div class="name">${name}</div>
+                        <div class="subtext">${subtext}</div>
+                    </div>
                 </div>
             </div>
         `;
+    }
+
+    fitCasterCard(id) {
+        const e = this.querySelector(`#${id}`);
+        console.log(e);
+        e.style.transform = 'scaleX(1)';
+        const scale = 600 / e.clientWidth;
+        e.style.transformOrigin = 'center';
+        e.style.transform = `scaleX(${Math.min(1, scale)})`;
     }
 }
 

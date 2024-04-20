@@ -4,7 +4,7 @@
     height: 870px;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: flex-end;
@@ -12,10 +12,9 @@
 
 .caster-wrapper.single {
     grid-template-columns: 1fr;
-
 }
 
-.caster-card {
+.caster-card > * {
     background: #662B29;
     border: 3px solid #F05B56;
     padding: 0 30px;
@@ -25,13 +24,14 @@
     gap: 20px;
     font-size: 55px;
     min-width: 360px;
+    white-space: nowrap;
 }
 
-.caster-card > .name {
+.caster-card .name {
     font-weight: 500;
 }
 
-.caster-card > .subtext {
+.caster-card .subtext {
     font-size: .5em;
     font-weight: 400;
     font-family: "IBM Plex Mono";
